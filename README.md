@@ -1,7 +1,7 @@
 # grimd
-[![Travis](https://img.shields.io/travis/looterz/grimd.svg?style=flat-square)](https://travis-ci.org/looterz/grimd)
-[![Go Report Card](https://goreportcard.com/badge/github.com/looterz/grimd?style=flat-square)](https://goreportcard.com/report/github.com/looterz/grimd)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/looterz/grimd)
+[![Travis](https://img.shields.io/travis/ochronus/grimd.svg?style=flat-square)](https://travis-ci.org/ochronus/grimd)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ochronus/grimd?style=flat-square)](https://goreportcard.com/report/github.com/ochronus/grimd)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/ochronus/grimd)
 
 :zap: Fast dns proxy that can run anywhere, built to black-hole internet advertisements and malware servers.
 
@@ -9,10 +9,10 @@ Based on [kenshinx/godns](https://github.com/kenshinx/godns) and [miekg/dns](htt
 
 # Installation
 ```
-go get github.com/looterz/grimd
+go get github.com/ochronus/grimd
 ```
 
-You can also download one of the [releases](https://github.com/looterz/grimd/releases), detailed guides and resources can be found on the [wiki](https://github.com/looterz/grimd/wiki).
+You can also download one of the [releases](https://github.com/ochronus/grimd/releases), detailed guides and resources can be found on the [wiki](https://github.com/ochronus/grimd/wiki).
 
 # Configuration
 If ```grimd.toml``` is not found, it will be generated for you, below is the default configuration.
@@ -93,7 +93,7 @@ reactivationdelay = 300
 # Building
 Requires golang 1.7 or higher, you build grimd like any other golang application, for example to build for linux x64
 ```shell
-env GOOS=linux GOARCH=amd64 go build -v github.com/looterz/grimd
+env GOOS=linux GOARCH=amd64 go build -v github.com/ochronus/grimd
 ```
 
 # Web API
@@ -105,4 +105,4 @@ A restful json api is exposed by default on the local interface, allowing you to
 Incoming requests spawn a goroutine and are served concurrently, and the block cache resides in-memory to allow for rapid lookups, while answered queries are cached allowing grimd to serve thousands of queries at once while maintaining a memory footprint of under 15mb for 100,000 blocked domains!
 
 # Daemonize
-You can find examples of different daemon scripts for grimd on the [wiki](https://github.com/looterz/grimd/wiki/Daemon-Scripts).
+You can find examples of different daemon scripts for grimd on the [wiki](https://github.com/ochronus/grimd/wiki/Daemon-Scripts).
