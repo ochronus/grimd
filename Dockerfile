@@ -1,8 +1,8 @@
 FROM golang
-LABEL mantainer="integrii@gmail.com"
+LABEL mantainer="ochronus@ochronus.com"
 
-ADD *.go /go/src/github.com/looterz/grimd/
-WORKDIR /go/src/github.com/looterz/grimd
+ADD *.go /go/src/github.com/ochronus/grimd/
+WORKDIR /go/src/github.com/ochronus/grimd
 RUN go get -v
 RUN go build -v
 RUN mkdir /app
